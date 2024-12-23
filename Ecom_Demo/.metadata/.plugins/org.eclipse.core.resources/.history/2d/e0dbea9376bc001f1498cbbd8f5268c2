@@ -1,0 +1,27 @@
+package com.ecom.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecom.dao.UserDao;
+import com.ecom.dto.ApiRespDto;
+import com.ecom.dto.UserRequestDto;
+import com.ecom.entities.User;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserDao userDao;
+	
+	
+	@Override
+	public ApiRespDto signUp(UserRequestDto Userdto) {
+		// TODO Auto-generated method stub
+		
+		userDao.save(Userdto,User.class);
+	
+		
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.ecom.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecom.dao.ProductDao;
+import com.ecom.dto.ApiRespDto;
+
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductDao productDao;
+	
+	
+	
+	@Override
+	public ApiRespDto deleteProduct(Long productId) {
+		// TODO Auto-generated method stub
+	
+		
+		
+		try {
+			if(productDao.existsById(productId)) {
+				productDao.deleteById(productId);
+			}
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		return null;
+	}
+
+}

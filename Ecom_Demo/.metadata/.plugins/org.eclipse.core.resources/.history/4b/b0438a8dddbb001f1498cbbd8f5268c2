@@ -1,0 +1,8 @@
+package com.ecom.service;
+
+import com.ecom.dto.UserRequestDto;
+
+public interface UserService {
+
+String signUp(UserRequestDto dto);
+}

@@ -1,0 +1,9 @@
+package com.ecom.service;
+
+import com.ecom.dto.ApiRespDto;
+
+public interface OrderService {
+	
+	ApiRespDto placeOrder(Long productId,Long customerId,int quantity);
+
+}

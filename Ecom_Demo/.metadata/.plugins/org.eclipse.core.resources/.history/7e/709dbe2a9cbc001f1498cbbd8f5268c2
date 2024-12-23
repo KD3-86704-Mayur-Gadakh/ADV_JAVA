@@ -1,0 +1,14 @@
+package com.ecom.dto;
+
+import jakarta.persistence.Column;
+
+public class ProductDto {
+	
+	@Column(length = 20)
+	private String title;
+	@Column(name = "description", length = 50)
+	private String description;
+	@Column(name = "price")
+	private double price;
+
+}
